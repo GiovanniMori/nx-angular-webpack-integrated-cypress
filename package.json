@@ -6,10 +6,12 @@
     "start": "nx serve angular-integrated",
     "e2e": "nx run angular-integrated-e2e:e2e",
     "build": "nx build angular-integrated",
-    "serve": "vite serve ./dist/apps/angular-integrated --port=4200"
+    "serve": "vite serve ./dist/apps/angular-integrated --port=4200",
+    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
   },
   "private": true,
   "dependencies": {
+    "@angular-architects/module-federation": "^17.0.1",
     "@angular/animations": "~17.0.0",
     "@angular/common": "~17.0.0",
     "@angular/compiler": "~17.0.0",
@@ -55,6 +57,7 @@
     "jest-environment-jsdom": "^29.4.1",
     "jest-preset-angular": "~13.1.4",
     "jsonc-eslint-parser": "^2.1.0",
+    "ngx-build-plus": "^17.0.0",
     "nx": "17.2.8",
     "prettier": "^2.6.2",
     "ts-jest": "^29.1.0",
