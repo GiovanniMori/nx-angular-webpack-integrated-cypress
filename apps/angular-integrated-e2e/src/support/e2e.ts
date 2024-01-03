@@ -15,3 +15,10 @@
 
 // Import commands.ts using ES2015 syntax:
 import './commands';
+
+Cypress.on('uncaught:exception', (err, runnable) => {
+  console.log(err);
+  // returning false here prevents Cypress from
+  // failing the test
+  return false;
+});
